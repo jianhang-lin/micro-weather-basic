@@ -13,7 +13,7 @@ public class Forecast implements Serializable {
 
     private String date;
 
-    private String hight;
+    private String high;
 
     private String fengli;
 
@@ -34,12 +34,12 @@ public class Forecast implements Serializable {
         this.date = date;
     }
 
-    public String getHight() {
-        return hight;
+    public String getHigh() {
+        return high;
     }
 
-    public void setHight(String hight) {
-        this.hight = hight;
+    public void setHigh(String high) {
+        this.high = high;
     }
 
     public String getFengli() {

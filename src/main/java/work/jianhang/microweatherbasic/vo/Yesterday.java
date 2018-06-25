@@ -13,7 +13,7 @@ public class Yesterday implements Serializable {
 
     private String date;
 
-    private String hight;
+    private String high;
 
     private String fx;
 
@@ -34,12 +34,12 @@ public class Yesterday implements Serializable {
         this.date = date;
     }
 
-    public String getHight() {
-        return hight;
+    public String getHigh() {
+        return high;
     }
 
-    public void setHight(String hight) {
-        this.hight = hight;
+    public void setHigh(String high) {
+        this.high = high;
     }
 
     public String getFx() {
