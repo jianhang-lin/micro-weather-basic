@@ -3,6 +3,7 @@ package work.jianhang.microweatherbasic.service.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import work.jianhang.microweatherbasic.service.WeatherDataService;
 import work.jianhang.microweatherbasic.vo.WeatherResponse;
@@ -14,6 +15,7 @@ import java.io.IOException;
  *
  * @author jianhanglin
  */
+@Service
 public class WeatherDataServiceImpl implements WeatherDataService {
 
     @Autowired
