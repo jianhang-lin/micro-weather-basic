@@ -2,6 +2,7 @@ package work.jianhang.microweatherbasic.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -21,7 +22,15 @@ public class WeatherDataServiceImpl implements WeatherDataService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
     private final String WEATHER_API = "http://wthrcdn.etouch.cn/weather_mini";
+
+    /**
+     * 缓存超时时间
+     */
+    private final Long TIME_OUT = 1800L;
 
     @Override
     public WeatherResponse getDataByCityId(String cityId) {
